@@ -10,9 +10,15 @@ body{
     background-color: #02111B;
 }
 
-#root,
-.app{
-    height: 100vh;
+h1{
+    color: white;
+    text-align: center;
+
+    margin: 5rem 0 2rem;
+
+    font-size: 3rem;
+
+    text-transform: uppercase;
 }
 
 form{
@@ -22,23 +28,21 @@ form{
     height: 100%;
 }
 
-input{
-    height: 80px;
+select{
+    height: 60px;
     width: 300px;
 
     margin-right: 10px;
 
-    border-radius: 50px;
+    border-radius: 120px;
     font-size: 1.2rem;
 
-    padding: 1rem;
-
-    border: 3px solid #D81E5B;
+    padding: 0.5rem;
 }
 
 button{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
 
     border-radius: 50%;
 
