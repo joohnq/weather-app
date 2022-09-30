@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -26,13 +26,13 @@ h1 {
   gap: 1rem;
 }
 
-h1 svg{
-    width: 100px;
-    height: 100px;
+h1 svg {
+  width: 100px;
+  height: 100px;
 }
 
-strong{
-    margin-left: 0.5rem;
+strong {
+  margin-left: 0.5rem;
 }
 
 form {
@@ -50,6 +50,14 @@ form {
   border-radius: 20px 20px 0 0;
 }
 
+form > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+}
+
 input {
   height: 40px;
   width: 50%;
@@ -59,6 +67,10 @@ input {
 
   font-size: 1rem;
   padding: 0 20px;
+}
+
+input[type="checkbox"] {
+  width: 25px;
 }
 
 button {
@@ -104,76 +116,87 @@ button:hover {
 }
 
 .container > div {
-    background-color: white;
+  background-color: white;
 
-    margin: 2rem auto;
+  margin: 2rem auto;
 
-    width: 80%;
-    height: 100%;
+  width: 90%;
+  height: 100%;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    display: grid;
-    grid-template: 
-    'city temp' 50px
-    'row row' 1px
-    'description geralInfo' 150px;
-    padding: 1rem;
-    gap: 1rem;
-    font-size: 1.2rem;
+  display: grid;
+  grid-template:
+    "city city" 50px
+    "row row" 1px
+    "description geralInfo" 150px
+    / 1fr 2fr;
+  padding: 1rem;
+  gap: 1rem;
+  font-size: 1.2rem;
 }
 
-.row{
-    width: 100%;
-    height: 2px;
+.row {
+  width: 100%;
+  height: 2px;
 
-    background-color: black;
+  background-color: black;
 
-    grid-area: row;
+  grid-area: row;
 }
-.city{
-    display: flex;
-    justify-content: center;
+.city {
+  display: flex;
+  justify-content: center;
 
-    grid-area: city;
-}
-
-.city h2{
-    font-size: clamp(.5rem, 1.5rem, 2.5em);
-
-    text-transform: uppercase;
-
-    margin-right: .2rem;
-
-    font-weight: 700;
+  grid-area: city;
 }
 
-.temp{
-    grid-area: temp;
+.city h2 {
+  font-size: 2rem;
+
+  text-transform: uppercase;
+
+  margin-right: 0.2rem;
+
+  font-weight: 700;
 }
 
-.description{
-    grid-area: description;
-
-    margin: 0 auto;
-    text-align: center;
-
-    font-weight: 700;
+.temp {
+  grid-area: temp;
+  text-align: center;
 }
 
-.geralInfo{
-    grid-area: geralInfo;
+.temp p {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
 
-    margin-top: 0.5rem;
+.description {
+  grid-area: description;
+
+  margin: 0 auto;
+  text-align: center;
+
+  font-weight: 700;
+}
+
+.description p {
+  text-transform: capitalize;
+}
+
+.geralInfo {
+  grid-area: geralInfo;
+
+  margin-top: 0.5rem;
 }
 
 .geralInfo p {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
+  display: flex;
+  align-items: center;
 }
 
-svg{
-    width: 40px;
-    height: 40px;
+svg {
+  width: 40px;
+  height: 40px;
 }
