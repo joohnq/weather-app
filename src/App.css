@@ -1,61 +1,179 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-    font-family: Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background-color: #02111B;
+body {
+  background-color: #02111b;
 }
 
-h1{
-    color: white;
-    text-align: center;
+h1 {
+  color: white;
+  text-align: center;
 
-    margin: 5rem 0 2rem;
+  margin: 5rem 0 2rem;
 
-    font-size: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h1 svg{
+    width: 100px;
+    height: 100px;
+}
+
+strong{
+    margin-left: 0.5rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  padding: 1rem 0;
+
+  width: 100%;
+  background-color: white;
+
+  border-radius: 20px 20px 0 0;
+}
+
+input {
+  height: 40px;
+  width: 50%;
+
+  border-radius: 20px;
+  border: 2px solid black;
+
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+
+  border-radius: 50%;
+
+  background-color: #d81e5b;
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  background-color: white;
+
+  max-width: 600px;
+  height: 600px;
+
+  border-radius: 22px;
+
+  margin: 0 auto;
+
+  background-color: #d81e5b;
+
+  border-radius: 20px;
+}
+
+.container > div {
+    background-color: white;
+
+    margin: 2rem auto;
+
+    width: 80%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    display: grid;
+    grid-template: 
+    'city temp' 50px
+    'row row' 1px
+    'description geralInfo' 150px;
+    padding: 1rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.row{
+    width: 100%;
+    height: 2px;
+
+    background-color: black;
+
+    grid-area: row;
+}
+.city{
+    display: flex;
+    justify-content: center;
+
+    grid-area: city;
+}
+
+.city h2{
+    font-size: clamp(.5rem, 1.5rem, 2.5em);
 
     text-transform: uppercase;
+
+    margin-right: .2rem;
+
+    font-weight: 700;
 }
 
-form{
+.temp{
+    grid-area: temp;
+}
+
+.description{
+    grid-area: description;
+
+    margin: 0 auto;
+    text-align: center;
+
+    font-weight: 700;
+}
+
+.geralInfo{
+    grid-area: geralInfo;
+
+    margin-top: 0.5rem;
+}
+
+.geralInfo p {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    /* justify-content: center; */
 }
 
-select{
-    height: 60px;
-    width: 300px;
-
-    margin-right: 10px;
-
-    border-radius: 120px;
-    font-size: 1.2rem;
-
-    padding: 0.5rem;
-}
-
-button{
-    height: 60px;
-    width: 60px;
-
-    border-radius: 50%;
-
-    background-color: #D81E5B;
-    color: white;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-button:hover{
-    opacity: 0.8;
+svg{
+    width: 40px;
+    height: 40px;
 }
